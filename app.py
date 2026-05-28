@@ -102,13 +102,13 @@ try:
         )
 
     # =====================================
-    # DATASET DEFAULT
+    # DATASET DEFAULT (SUDAH DISESUAIKAN)
     # =====================================
 
     else:
 
         df = pd.read_csv(
-            "data/data.csv"
+            "data.csv"
         )
 
     # =====================================
