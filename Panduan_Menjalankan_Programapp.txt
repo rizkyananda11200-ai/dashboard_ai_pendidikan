@@ -1,55 +1,73 @@
-====================================================================
-PANDUAN MENJALANKAN PLATFORM ANALYTICS "EDUVERA"
-====================================================================
+========================================================================
+             PANDUAN AKSES & PENGOPERASIAN PLATFORM EDUVERA
+========================================================================
 
-Platform EDUVERA ini dibangun menggunakan bahasa pemrograman Python 
-dan Framework Streamlit Data Hub.
+EDUVERA adalah platform Analytics & Predictive Hub interaktif untuk data 
+statistik pendidikan nasional Indonesia. Aplikasi ini dikembangkan dengan 
+bahasa pemrograman Python dan pustaka Streamlit, serta mengintegrasikan 
+algoritma Machine Learning untuk keperluan analisis data tingkat lanjut.
 
-Untuk dapat membuka dan menjalankan platform ini di perangkat Bapak/Ibu Dosen, 
-mohon ikuti panduan langkah demi langkah berikut:
+Berikut adalah dua metode untuk mengakses dan menjalankan platform ini:
 
-Langkah 1: Pastikan Python Terinstal
------------------------------------
-Pastikan perangkat Anda sudah terinstal Python (direkomendasikan versi 3.8 ke atas).
+------------------------------------------------------------------------
+A. CARA AKSES ONLINE (REKOMENDASI)
+------------------------------------------------------------------------
+Metode ini merupakan cara paling praktis karena aplikasi telah berhasil 
+di-deploy secara cloud ke peladen internet Streamlit Cloud, sehingga dapat 
+diuji langsung tanpa memerlukan instalasi lokal.
 
-Langkah 2: Buka Terminal / Command Prompt
-------------------------------------------
-1. Buka Command Prompt (untuk Windows) atau Terminal (untuk Mac/Linux).
-2. Arahkan direktori (menggunakan perintah 'cd') ke dalam folder 
-   projek EDUVERA ini tempat file 'app.py' berada.
-   
-   Contoh di Windows: cd C:\Users\NamaUser\Documents\EDUVERA
-   Contoh di Mac/Linux: cd /Users/NamaUser/Documents/EDUVERA
+1. Buka peramban (browser) pada perangkat (Google Chrome / Firefox / Edge).
+2. Akses tautan resmi berikut:
+   https://d4shboardaipendidikan.streamlit.app/
+3. Tunggu beberapa saat hingga proses inisialisasi peladen selesai dan 
+   halaman utama platform EDUVERA muncul secara utuh.
 
-Langkah 3: Instalasi Dependencies (Libraries)
-------------------------------------------
-Instal semua pustaka pendukung yang dibutuhkan oleh sistem EDUVERA 
-secara otomatis dengan mengetik perintah berikut di Terminal, lalu tekan Enter:
+------------------------------------------------------------------------
+B. CARA AKSES DARI VS CODE (LOKAL)
+------------------------------------------------------------------------
+Jika Bapak/Ibu ingin memeriksa kode sumber (source code) secara langsung 
+atau menjalankan aplikasi ini di lingkungan lokal (Localhost) lewat komputer:
 
-pip install -r requirements.txt
+1. Prasyarat Sistem:
+   - Pastikan perangkat telah terinstal Python (minimal versi 3.9).
+   - Pastikan aplikasi VS Code (Visual Studio Code) telah terpasang.
 
-*Catatan: Pastikan perangkat terhubung dengan koneksi internet saat proses ini.
+2. Persiapan Berkas Projek:
+   - Unduh berkas dari repository GitHub ini (melalui opsi Download ZIP).
+   - Ekstrak berkas ZIP tersebut ke dalam satu direktori di komputer.
+   - Buka VS Code, klik menu "File" -> "Open Folder", lalu arahkan ke 
+     direktori projek yang telah diekstrak.
 
-Langkah 4: Jalankan Aplikasi
------------------------------
-Setelah proses instalasi dependensi selesai, panggil dan jalankan platform 
-dengan mengetik perintah berikut:
+3. Instalasi Pustaka (Dependencies):
+   - Buka Terminal di dalam VS Code (dapat menggunakan pintasan Ctrl + `).
+   - Pastikan perangkat terhubung ke internet, lalu ketik perintah berikut 
+     pada terminal untuk menginstal seluruh pustaka yang dibutuhkan:
+     
+     pip install -r requirements.txt
 
-streamlit run app.py
+   - Tunggu hingga terminal selesai mengunduh dan mengonfigurasi pustaka 
+     (Streamlit, Plotly, Folium, Scikit-Learn, dll).
 
-Langkah 5: Akses via Browser
------------------------------
-Sistem secara otomatis akan meluncurkan browser bawaan perangkat Anda 
-dan mengarahkannya ke alamat server lokal: http://localhost:8501
+4. Menjalankan Aplikasi:
+   - Setelah proses instalasi berhasil, jalankan program dengan mengetikkan 
+     perintah berikut pada terminal VS Code:
+     
+     streamlit run app.py
 
-Struktur Fitur Navigasi di Dalam Platform:
-------------------------------------------
-- Main Dashboard      : Ringkasan data umum nasional & grafik multivariat.
-- Search Region       : Pencarian data profil spesifik tiap provinsi.
-- Region Ranking      : Pemeringkatan wilayah kontributor satuan pendidikan.
-- Distribution Map    : Pemetaan geokoordinat sebaran nasional interaktif.
-- Trend Projection    : Pemodelan regresi linear proyeksi kapasitas masa depan.
-- Density Clustering  : Analisis klasterisasi spasial rasio kepadatan kelas.
+   - Sistem akan secara otomatis membuka tab baru pada peramban dengan alamat 
+     Localhost (default: http://localhost:8501) yang menampilkan 
+     dashboard EDUVERA secara lokal.
 
-Terima kasih atas waktu Bapak/Ibu Dosen untuk meninjau platform EDUVERA.
-====================================================================
+------------------------------------------------------------------------
+C. STRUKTUR MENU UTAMA PLATFORM
+------------------------------------------------------------------------
+1. Main Dashboard: Ringkasan statistik nasional dan visualisasi grafik.
+2. Search Region: Pencarian profil wilayah spesifik dan peta geografis.
+3. Region Ranking: Pemeringkatan 10 besar daerah kontributor tertinggi.
+4. Distribution Map: Visualisasi spasial sebaran sekolah dan siswa.
+5. Trend Projection: Prediksi kapasitas murid masa depan via Linear Regression.
+6. Density Clustering: Klusterisasi tingkat kepadatan beban sekolah via K-Means.
+
+========================================================================
+               Dikembangkan oleh: Rizky Ananda Hutagalung
+========================================================================
