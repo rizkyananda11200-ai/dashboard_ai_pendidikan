@@ -1,0 +1,12 @@
+# ====================================================================
+# EDUVERA // CORE DEPENDENCIES
+# Kumpulan library python untuk menjalankan platform analytics EDUVERA.
+# ====================================================================
+
+streamlit
+pandas
+plotly
+folium
+streamlit-folium
+scikit-learn
+openpyxl

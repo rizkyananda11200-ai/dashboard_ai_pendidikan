@@ -1,0 +1,55 @@
+====================================================================
+PANDUAN MENJALANKAN PLATFORM ANALYTICS "EDUVERA"
+====================================================================
+
+Platform EDUVERA ini dibangun menggunakan bahasa pemrograman Python 
+dan Framework Streamlit Data Hub.
+
+Untuk dapat membuka dan menjalankan platform ini di perangkat Bapak/Ibu Dosen, 
+mohon ikuti panduan langkah demi langkah berikut:
+
+Langkah 1: Pastikan Python Terinstal
+-----------------------------------
+Pastikan perangkat Anda sudah terinstal Python (direkomendasikan versi 3.8 ke atas).
+
+Langkah 2: Buka Terminal / Command Prompt
+------------------------------------------
+1. Buka Command Prompt (untuk Windows) atau Terminal (untuk Mac/Linux).
+2. Arahkan direktori (menggunakan perintah 'cd') ke dalam folder 
+   projek EDUVERA ini tempat file 'app.py' berada.
+   
+   Contoh di Windows: cd C:\Users\NamaUser\Documents\EDUVERA
+   Contoh di Mac/Linux: cd /Users/NamaUser/Documents/EDUVERA
+
+Langkah 3: Instalasi Dependencies (Libraries)
+------------------------------------------
+Instal semua pustaka pendukung yang dibutuhkan oleh sistem EDUVERA 
+secara otomatis dengan mengetik perintah berikut di Terminal, lalu tekan Enter:
+
+pip install -r requirements.txt
+
+*Catatan: Pastikan perangkat terhubung dengan koneksi internet saat proses ini.
+
+Langkah 4: Jalankan Aplikasi
+-----------------------------
+Setelah proses instalasi dependensi selesai, panggil dan jalankan platform 
+dengan mengetik perintah berikut:
+
+streamlit run app.py
+
+Langkah 5: Akses via Browser
+-----------------------------
+Sistem secara otomatis akan meluncurkan browser bawaan perangkat Anda 
+dan mengarahkannya ke alamat server lokal: http://localhost:8501
+
+Struktur Fitur Navigasi di Dalam Platform:
+------------------------------------------
+- Main Dashboard      : Ringkasan data umum nasional & grafik multivariat.
+- Search Region       : Pencarian data profil spesifik tiap provinsi.
+- Region Ranking      : Pemeringkatan wilayah kontributor satuan pendidikan.
+- Distribution Map    : Pemetaan geokoordinat sebaran nasional interaktif.
+- Trend Projection    : Pemodelan regresi linear proyeksi kapasitas masa depan.
+- Density Clustering  : Analisis klasterisasi spasial rasio kepadatan kelas.
+
+Terima kasih atas waktu Bapak/Ibu Dosen untuk meninjau platform EDUVERA.
+====================================================================
